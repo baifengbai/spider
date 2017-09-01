@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*
 import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
 import urllib2
 import socket
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 
 class getIP():
     def getIPlist(self):
@@ -11,7 +13,7 @@ class getIP():
         f = open("E:\\IP\\proxy")
         lines = f.readlines()
         proxys = []
-        list=[]
+        list = []
         for i in range(0, len(lines)):
             ip = lines[i].strip("\n").split("\t")
             proxy_host = "http://" + ip[0] + ":" + ip[1]
@@ -20,22 +22,24 @@ class getIP():
         url = "http://ip.chinaz.com/getip.aspx"
         for proxy in proxys:
             try:
-                #print proxy
+                # print proxy
                 # request = urllib2.Request(url)
                 try:
                     response = urllib2.urlopen(url, timeout=10)
-                    #print response.getcode()
-                    if response.getcode()==200:
+                    # print response.getcode()
+                    if response.getcode() == 200:
                         list.append(proxy)
                 except Exception:
-                    #print 'xx'
+                    # print 'xx'
                     pass
 
             except Exception, e:
                 print proxy
                 print e
                 continue
-        return  list
-if __name__=='__main__':
-    list=getIP().getIPlist()
+        return list
+
+
+if __name__ == '__main__':
+    list = getIP().getIPlist()
     print list

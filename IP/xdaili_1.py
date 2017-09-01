@@ -5,7 +5,8 @@ import pymysql
 
 
 def main():
-    url = "http://www.xdaili.cn/ipagent//greatRecharge/getGreatIp?spiderId=9da3a75c587e46a9b8039eaa91f3ea9c&orderno=MF20178217365FsU5IA&returnType=2&count=20"
+    # xdaili ip url
+    url = ""
     request = urllib2.Request(url)
     response = urllib2.urlopen(request)
     hd = response.read()
