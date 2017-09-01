@@ -1,0 +1,7 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+.wmzy.com	TRUE	/	FALSE	1501758679	login	login
+.wmzy.com	TRUE	/	FALSE		token	dJBtFsV8zsx4jjkD7cLZmu6hYCnN1dDBH9BaF2VVOH6TzJwqKxW5pV7LUcmT_dKBhxyq_jd5rf-TopacENYvhW==
+www.wmzy.com	FALSE	/	FALSE	1502104249	sessionid	s:UKPHIbpMXudZl0VBj0TOHo5P.fMK78XYW5QSp/bqbXd1dJKOqI1DZbCwjZ2x83U/gwGo
