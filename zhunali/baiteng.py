@@ -23,8 +23,8 @@ number = 0
 
 def getList():
     list = []
-    conn = pymysql.connect(host = '172.31.8.10', port = 3306, user = 'jiezhang',
-                           password = 'jiezhang', db='zhiyuan', charset = 'utf8')
+    conn = pymysql.connect(host = '127.0.0.1', port = 3306, user = 'xxx',
+                           password = 'xxxx', db='zhiyuan', charset = 'utf8')
     cursor = conn.cursor()
     sql = "SELECT * FROM IPproxy ORDER BY grade DESC LIMIT 0,400"
     cursor.execute(sql)

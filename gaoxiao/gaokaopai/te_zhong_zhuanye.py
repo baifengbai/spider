@@ -43,9 +43,9 @@ def get_list():
         try:
             list_t = []
             # IP_grade = {}
-            conn = pymysql.connect(host='172.31.8.10', port=3306,
-                                   user='jiezhang',
-                                   password='jiezhang', db='zhiyuan',
+            conn = pymysql.connect(host='127.0.0.1', port=3306,
+                                   user='xxxx',
+                                   password='xxxx', db='zhiyuan',
                                    charset='utf8')
             cursor = conn.cursor()
             qi = ci * 20 * 20

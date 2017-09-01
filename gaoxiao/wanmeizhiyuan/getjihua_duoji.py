@@ -29,8 +29,8 @@ user_agent.append('Mozilla/5.0 (Windows NT 6.2; WOW64; rv:22.0) Gecko/20100101 F
 
 def change_grade(IP_grade):
     print " 更新数据库"
-    conn = pymysql.connect(host='172.31.8.10', port=3306, user='jiezhang',
-                           password='jiezhang', db='zhiyuan', charset='utf8')
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='xxx',
+                           password='xxx', db='zhiyuan', charset='utf8')
     cursor = conn.cursor()
     print "genxin:", IP_grade
     try:
@@ -52,8 +52,8 @@ def getList():
     # global IP_grade
     IP_grade = {}
     list = []
-    conn = pymysql.connect(host='172.31.8.10', port=3306, user='jiezhang',
-                           password='jiezhang', db='zhiyuan', charset='utf8')
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='xxx',
+                           password='xxxx', db='zhiyuan', charset='utf8')
     cursor = conn.cursor()
     sql = "SELECT * FROM IPproxy ORDER BY grade DESC LIMIT 0,200"
     cursor.execute(sql)

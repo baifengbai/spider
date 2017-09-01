@@ -12,8 +12,8 @@ sys.setdefaultencoding("utf-8")
 
 
 def delete_ip():
-    conn = pymysql.connect(host='172.31.8.10', port=3306, user='jiezhang',
-                           password='jiezhang', db='zhiyuan', charset='utf8')
+    conn = pymysql.connect(host='172.0.0.1', port=3306, user='xxx',
+                           password='xxx', db='zhiyuan', charset='utf8')
     cursor = conn.cursor()
     sql_2 = "DELETE FROM IPproxy3 where grade < -2 "
     cursor.execute(sql_2)
@@ -23,8 +23,8 @@ def delete_ip():
 
 
 def to_DB_IPproxy2(list1):
-    conn = pymysql.connect(host='172.31.8.10', port=3306, user='jiezhang',
-                           password='jiezhang', db='zhiyuan', charset='utf8')
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='xxxx',
+                           password='xxx', db='zhiyuan', charset='utf8')
     cursor = conn.cursor()
     sql = "INSERT INTO IPproxy2(host,port,grade) VALUES(%s, %s, %s)"
     for lines in list1:
@@ -40,8 +40,8 @@ def to_DB_IPproxy2(list1):
 
 def change_grade(grade):
     print " 更新数据库"
-    conn = pymysql.connect(host='172.31.8.10', port=3306, user='jiezhang',
-                           password='jiezhang', db='zhiyuan', charset='utf8')
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='xxx',
+                           password='xxx', db='zhiyuan', charset='utf8')
     cursor = conn.cursor()
     # print "genxin:", IP_grade
     try:
@@ -77,9 +77,9 @@ def te_ip(ip_m, ip_list_yes):
 
 
 def main():
-    conn = pymysql.connect(host='172.31.8.10', port=3306,
-                           user='jiezhang',
-                           password='jiezhang', db='zhiyuan',
+    conn = pymysql.connect(host='127.0.0.1', port=3306,
+                           user='xxx',
+                           password='xxxx', db='zhiyuan',
                            charset='utf8')
     cursor = conn.cursor()
     sql = "SELECT * FROM IPproxy3 "

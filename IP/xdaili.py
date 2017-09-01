@@ -11,8 +11,8 @@ def main():
     hd = response.read()
     # print hd
     json_h = json.loads(hd)
-    conn = pymysql.connect(host='172.31.8.10', port=3306, user='jiezhang',
-                           password='jiezhang', db='zhiyuan', charset='utf8')
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='xxxx',
+                           password='xxxx', db='zhiyuan', charset='utf8')
     cursor = conn.cursor()
     sql = "INSERT INTO IPproxy2(host,port,grade) VALUES(%s, %s, %s)"
     sql_1 = "INSERT INTO IPproxy3(host,port,grade) VALUES(%s, %s, %s)"

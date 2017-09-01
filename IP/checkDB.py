@@ -12,8 +12,8 @@ sys.setdefaultencoding("utf-8")
 
 
 def delete_ip():
-    conn = pymysql.connect(host='172.31.8.10', port=3306, user='jiezhang',
-                           password='jiezhang', db='zhiyuan', charset='utf8')
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='xxx',
+                           password='xxx', db='zhiyuan', charset='utf8')
     cursor = conn.cursor()
     sql_2 = "DELETE FROM IPproxy where grade < -2 "
     cursor.execute(sql_2)
@@ -33,8 +33,8 @@ def main():
     list1.extend(list3)
     list1.extend(list4)
 
-    conn = pymysql.connect(host='172.31.8.10', port=3306, user='jiezhang',
-                           password='jiezhang', db='zhiyuan', charset='utf8')
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='',
+                           password='', db='zhiyuan', charset='utf8')
     cursor = conn.cursor()
     sql = "INSERT INTO IPproxy(host,port,grade) VALUES(%s, %s, %s)"
     for lines in list1:
