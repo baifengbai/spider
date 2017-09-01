@@ -5,7 +5,8 @@ import pymysql
 
 
 def main():
-    url = "http://www.xdaili.cn/ipagent//privateProxy/applyStaticProxy?spiderId=9da3a75c587e46a9b8039eaa91f3ea9c&returnType=2&count=1"
+    # xundaili ip url
+    url = ""
     request = urllib2.Request(url)
     response = urllib2.urlopen(request)
     hd = response.read()
